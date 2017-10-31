@@ -1,0 +1,31 @@
+#! /bin/sh
+# author: huongnhd
+# email: huongnhdh@gmail.com
+
+#*) Start python script from init.d
+#1) create a new file in /etc/init.d/ in this case it will be example, so sudo nano /etc/init.d/example
+#2) locate: /etc/init.d/example
+#3) give the file execute rights, sudo chmod 755 example
+#4) now execute: sudo update-rc.d example defaults
+#5) When you reboot debian it should automatically start the python script, else try service example start and service example stop
+
+
+APP_NAME = 'example'
+case "$1" in
+  start)
+    echo "Starting ".$APP_NANME
+    # run application you want to start
+    python /usr/local/sbin/example.py &
+    ;;
+  stop)
+    echo "Stopping ".$APP_NAME
+    # kill application you want to stop
+    kill $(ps aux | grep “python /usr/local/sbin/example.py” | awl '{print $2}');
+    ;;
+  *)
+    echo "Usage: /etc/init.d/".$APP_NAME."{start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

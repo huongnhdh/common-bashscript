@@ -1,6 +1,6 @@
 # author: @huongnhd
 # email: huong.nhdh@gmail.com
-#
+# Ref https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units
 # http://www.raspberrypi-spy.co.uk/2015/10/how-to-autorun-a-python-script-on-boot-using-systemd/
 # 1) sudo vim /lib/systemd/system/myscript.service
 # 2) The content

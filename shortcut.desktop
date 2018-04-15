@@ -1,0 +1,17 @@
+# author: huongnhdh
+# email: huong.nhdh@gmail.com
+# NAME: EXAMPLE DESKTOP ICON IN UBUNTU
+# Ref: https://askubuntu.com/questions/141229/how-to-add-a-shell-script-to-launcher-as-shortcut
+#
+# 1) Locate:
+#   - Personal user : touch ~/.local/share/applications/shortcut_name.desktop
+#   - ALL users: sudo -i touch /usr/share/applications/shortcut_name.desktop
+#   * shortcut: name of shortcut
+
+[Desktop Entry]
+Type=Application
+Terminal=true
+Name=What your name? 
+Icon=/path/to/icon/icon.svg
+Exec=/path/to/file/mount-unmount.sh
+Categories=Development;IDE;Java;HashTag;
